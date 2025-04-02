@@ -37,19 +37,4 @@ const useGames = (gameQuery: GameQuery) =>
     initialPageParam: 1,
   });
 
-
-  // const useGames = (gameQuery: GameQuery) => 
-  //   useQuery<FetchResponse<Game>, Error>({
-  //     queryKey: ["games", gameQuery],
-  //     queryFn: ({ pageParam = 1}) => apiClient.getAll({ 
-  //       params: {
-  //         genres: gameQuery.genre?.id, 
-  //         parent_platforms: gameQuery.platform?.id,
-  //         ordering: gameQuery.sortOrder,
-  //         search: gameQuery.searchText,
-  //         page: pageParam
-  //       },
-  //     }),
-  //   });
-
 export default useGames;
