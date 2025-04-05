@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, SlideFade } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
 interface Props {
@@ -7,17 +7,23 @@ interface Props {
 
 const GameCardContainer = ({ children }: Props) => {
   return (
-    <Box
-      transition="all 0.3s"
-      _hover={{
-        transform: "scale(1.04)",
-        boxShadow: "lg",
-      }}
-      width="100%"
-      borderRadius={10}
+    <SlideFade
+      in={true}
+      offsetY="20px"
+      transition={{ enter: { duration: 0.4 } }}
     >
-      {children}
-    </Box>
+      <Box
+        transition="all 0.3s"
+        _hover={{
+          transform: "scale(1.04)",
+          boxShadow: "lg",
+        }}
+        width="100%"
+        borderRadius={10}
+      >
+        {children}
+      </Box>
+    </SlideFade>
   );
 };
 
