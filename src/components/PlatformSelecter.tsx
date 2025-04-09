@@ -3,7 +3,7 @@ import { BsChevronDown } from "react-icons/bs";
 import usePlateform from "../hooks/usePlatform";
 import usePlatforms from "../hooks/usePlatforms";
 import useGameQueryStore from "../store";
-import { Platform } from "../entities/Platform";
+import Platform from "../entities/Platform";
 
 // interface Props {
 //   onSelectPlatform: (platform: Platform) => void;
