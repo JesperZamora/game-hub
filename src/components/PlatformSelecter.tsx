@@ -3,6 +3,7 @@ import { BsChevronDown } from "react-icons/bs";
 import usePlateform from "../hooks/usePlatform";
 import usePlatforms from "../hooks/usePlatforms";
 import useGameQueryStore from "../store";
+import { Platform } from "../entities/Platform";
 
 // interface Props {
 //   onSelectPlatform: (platform: Platform) => void;
@@ -25,7 +26,7 @@ const PlatformSelecter = () => {
         {selectedPlatform?.name || "Platforms"}
       </MenuButton>
       <MenuList>
-        {data?.results.map((platform) => (
+        {data?.results.map((platform: Platform) => (
           <MenuItem
             key={platform.id}
             onClick={() => setSelectPlatformId(platform.id)}
