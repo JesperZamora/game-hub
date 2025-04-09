@@ -1,4 +1,4 @@
-export default {
+const genres = {
   "count": 19,
   "next": null,
   "previous": null,
@@ -860,3 +860,5 @@ export default {
       }
   ]
 }
+
+export default genres;

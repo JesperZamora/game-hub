@@ -1,4 +1,4 @@
-export default {
+const platforms = {
     "count": 14,
     "next": null,
     "previous": null,
@@ -613,3 +613,5 @@ export default {
         }
     ]
 }
+
+export default platforms;
