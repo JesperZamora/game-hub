@@ -23,13 +23,25 @@ const HomePage = () => {
         </GridItem>
       </Show>
       <GridItem area="main">
-        <Box paddingLeft={2}>
-          <GameHeading />
-          <HStack spacing={5} marginBottom={5}>
-            <PlatformSelecter />
-            <SortSelector />
-          </HStack>
-        </Box>
+        <Show above="lg">
+          <Box paddingLeft={2}>
+            <GameHeading />
+            <HStack spacing={2} marginBottom={5}>
+              <PlatformSelecter />
+              <SortSelector />
+            </HStack>
+          </Box>
+        </Show>
+        <Show below="lg">
+          <Box paddingLeft={0}>
+            <GameHeading />
+            <HStack spacing={2} marginBottom={5}>
+              <PlatformSelecter />
+              <SortSelector />
+            </HStack>
+          </Box>
+        </Show>
+
         <GameGrid />
       </GridItem>
     </Grid>

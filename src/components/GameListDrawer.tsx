@@ -38,7 +38,7 @@ const GameListDrawer = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader fontSize="2xl" marginBottom={3}>
+          <DrawerHeader fontSize="3xl" marginBottom={3}>
             Genres
           </DrawerHeader>
           <DrawerBody>
@@ -47,7 +47,7 @@ const GameListDrawer = () => {
                 <ListItem key={genre.id} paddingY="5px">
                   <HStack>
                     <Image
-                      boxSize="32px"
+                      boxSize="42px"
                       borderRadius={8}
                       objectFit="cover"
                       src={getCroppedImageUrl(genre.image_background)}
@@ -59,7 +59,7 @@ const GameListDrawer = () => {
                         genre.id === selectedGenreId ? "bold" : "normal"
                       }
                       onClick={() => setSelectedGenreId(genre.id)}
-                      fontSize="lg"
+                      fontSize="xl"
                       variant="link"
                     >
                       {genre.name}
