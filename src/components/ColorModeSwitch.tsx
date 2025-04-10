@@ -1,4 +1,5 @@
 import { HStack, Switch, Text, useColorMode } from "@chakra-ui/react";
+import { CgDarkMode } from "react-icons/cg";
 
 const ColorModeSwitch = () => {
   const { toggleColorMode, colorMode } = useColorMode();
@@ -9,7 +10,7 @@ const ColorModeSwitch = () => {
         isChecked={colorMode === "dark"}
         onChange={toggleColorMode}
       />
-      <Text whiteSpace={"nowrap"}>Dark Mode</Text>
+      <CgDarkMode size={24} />
     </HStack>
   );
 };
