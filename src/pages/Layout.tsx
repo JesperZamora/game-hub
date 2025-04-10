@@ -6,11 +6,11 @@ import GameListDrawer from "../components/GameListDrawer";
 const Layout = () => {
   return (
     <>
-      <HStack spacing={2} marginLeft={2} w="full" justify="space-between">
+      <HStack w="full" justify="space-between" paddingLeft={2} paddingRight={4}>
+        <NavBar />
         <Show below="lg">
           <GameListDrawer />
         </Show>
-        <NavBar />
       </HStack>
 
       <Box padding={6}>

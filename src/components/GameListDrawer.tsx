@@ -9,15 +9,16 @@ import {
   List,
   ListItem,
   HStack,
-  Spinner,
   Button,
   Image,
+  DrawerFooter,
 } from "@chakra-ui/react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import useGenres from "../hooks/useGenres";
 import useGameQueryStore from "../store";
 import Genre from "../entities/Genre";
 import getCroppedImageUrl from "../services/image-url";
+import ColorModeSwitch from "./ColorModeSwitch";
 
 const GameListDrawer = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -28,11 +29,11 @@ const GameListDrawer = () => {
 
   if (error) return null;
 
-  if (isLoading) return <Spinner />;
+  if (isLoading) return null;
 
   return (
     <>
-      <RxHamburgerMenu onClick={onOpen} cursor="pointer" size={35} />
+      <RxHamburgerMenu onClick={onOpen} cursor="pointer" size={38} />
       <Drawer placement="left" isOpen={isOpen} onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
@@ -68,6 +69,9 @@ const GameListDrawer = () => {
               ))}
             </List>
           </DrawerBody>
+          <DrawerFooter>
+            <ColorModeSwitch />
+          </DrawerFooter>
         </DrawerContent>
       </Drawer>
     </>
